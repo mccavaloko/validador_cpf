@@ -1,7 +1,13 @@
+import re
 # Pedindo o cpf ao usuário
 try:
     # Primeiro dígito
     cpf = input('Digite seu cpf.  ')
+    cpf = re.sub(
+        r'[^0-9]',
+        '',
+        cpf
+    )
     cpf_lista = []
     cpf_lista_resultado = []
     cpf_lista_resultado_2 = []
